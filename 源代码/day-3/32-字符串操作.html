@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串操作</title>
+    <script>
+        str = 'hello world';
+        str1 = 'lala';
+        console.log(str);
+        console.log(str1);
+        console.log(str.concat(str1));
+        console.log(str);
+        console.log(str.substr(0,5));
+        console.log(str.substr(6,5));
+        console.log(str.slice(3,7));
+        console.log(str.substring(0,3));
+        console.log(str.replace('el','qq'));
+        console.log(str.replace('rl','qq'));
+
+        // 需求 将'abkskjfisjfiajfksjfa'所有的 'a' 替换为：'*''
+        var str2 = 'abkskjfisjfiajfksjfa';
+        console.log(str2);
+        var index = str2.indexOf('a');
+        while (index !== -1) {
+            str2 = str2.replace('a','*');
+            index = str2.indexOf('a', index + 1);
+        }
+        console.log(str2);
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = '111';
+        alert(name);
+        // 1. 用户输入姓名 存储到一个myname 的变量里面
+        name =  prompt('请输入您的姓名');
+        alert(name);
+        // 2. 一个变量被重新赋值后 她原有的值会被覆盖
+        console.log(name);
+
+        // 3.可以同时声明过个变量
+        var address ='12@qq.com',
+            age = 20,
+            gz = 2000;
+        alert(address+age+gz);
+
+        // 只声明，不赋值 结果是 undefined
+        var sex;
+        console.log(sex);
+
+        // 不声明 不赋值  直接使用某个变量会报错
+
+        // 不声明  直接赋值 可以使用 （不提倡）  如果上一句错误 这句不执行
+        qq = 110;
+        console.log(qq);
+
+        // 变量命名规范
+        // 英文大小写  $  _ 0-9
+        // 大小写区分
+        // 不能以数字开头
+        // 不能使用关键字、保留字作为变量名
+        // 变量名必须有意义
+        // 遵守驼峰命名法：  首字母小写 后面每个单词的首字母都要大写
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

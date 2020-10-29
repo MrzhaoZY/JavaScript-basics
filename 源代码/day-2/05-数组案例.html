@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组 案例</title>
+    <script>
+        var arr1 = [];
+        var l = 0;
+        while(1){
+            var x = parseFloat(prompt('请往该数组里面放数字：' + '这是第' + (l + 1) + '个'));
+            if (x == -1) {
+                break;
+            }else{
+                arr1[l] = x;
+                l++;
+            }
+            
+        }
+        console.log('这个数组现在有' + l + '个数');
+        console.log(arr1);
+
+        var arr2 = [];
+        var m = 0;
+        for (var i = 0; i < arr1.length; i++) {
+            if(arr1[i] >= 10) {
+                arr2[m++] = arr1[i];  // m++ 可以直接写成 arr2.length
+            }
+        }
+        console.log(arr2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

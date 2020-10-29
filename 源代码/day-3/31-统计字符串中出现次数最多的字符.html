@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计字符串中出现次数最多的字符</title>
+    <script>
+        function getStr(str) {
+            var arr1 = [];
+            var arr2 = [];
+            var arr3 = [];
+            for (var i = 0; i < str.length; i++) {
+                if(arr1.indexOf(str.charAt(i)) == -1) {
+                    arr1.push(str.charAt(i));
+                    arr2.push(1);
+                }else{
+                    arr2[arr1.indexOf(str.charAt(i))]++;
+                }
+            }
+            var max = 0;
+            for (var i = 0; i < arr2.length; i++) {
+                if( arr2[i] > max) {
+                    max = arr2[i];
+                }
+            }
+            var index = arr2.indexOf(max);
+            while(index != -1) {
+                arr3.push(arr1[index]);
+                index = arr2.indexOf(max,index + 1);
+            }
+            return arr3;
+        }
+        var str1 = 'zhaozhiyong';
+        var arr = getStr(str1);
+        for (var i = 0; i <arr.length; i++) {
+            console.log(arr[i]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while案例</title>
+    <script>
+        //打印1-100
+        var bir = 0;
+        while (bir <= 100){
+            if(bir == 0){
+                console.log('这一年，你还有没出生！'); 
+            }else if(bir == 1){
+                console.log('这一年，你出生了！！！');
+            }else if(bir == 100){
+                console.log('你去世了，享年100岁！！！');
+            }else{
+                console.log('这一年，你'+bir+'岁了！！！');
+            }
+            bir++;
+        }
+
+        //计算1~100所有整数的和
+        var num = 0;
+        var x = 0;
+        while(x <= 100){
+            num += x++;
+        }
+        console.log(num);
+
+        //
+        while(1){
+            var str = prompt('你爱我吗？');
+            if(str == '我爱你'){
+                alert('嘿嘿');
+                break;
+            }else{
+                continue;
+            }
+        }
+        var num = 0;
+        do{
+            console.log('你今年'+(num+1)+'岁了！');
+            num++;
+        }while(num < 100)
+
+        var x = 0, num = 0;
+        do {
+            num += x++;
+        }while(x < 100)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

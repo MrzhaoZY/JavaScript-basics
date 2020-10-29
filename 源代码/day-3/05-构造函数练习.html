@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数</title>
+    <script>
+        function Hero(name, type, hp) {
+            this.name = name;
+            this.type = type;
+            this.hp = hp;
+            this.attack = function (attackType) {
+                console.log(attackType);
+            }
+        }
+        var lp = new Hero('廉颇', '力量型', 500);
+        lp.attack('近战');
+        console.log(lp.name);
+        console.log(lp.hp);
+
+        var hy = new Hero('后羿', '射手型', 200);
+        hy.attack('远程');
+        console.log(hy.name);
+        console.log(hy.hp);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

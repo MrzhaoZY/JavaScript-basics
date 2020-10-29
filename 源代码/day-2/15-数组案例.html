@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组案例</title>
+    <script>
+        // 1. 利用函数封装方式， 翻转任意一个数组
+        function reverse(arr) {
+            var temp = '';
+            var newArr = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr;
+        }
+        var arr = ['21',313,'4423s!','hel','feg'];
+        console.log(reverse(arr));
+
+        // 2. 冒泡排序
+        function bubbleSort(arr) {
+            for (var i = 0; i < arr.length - 1; i++){
+                for (var j = 0; j < arr.length - i - 1; j++) {
+                    if(arr[j] > arr[j+1]){
+                        var  temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var arr  = [43,2,1,67,45,87,4,56,234,424,54,0,7];
+        console.log('排序之前：' + arr);
+        console.log('排序之后：' + bubbleSort(arr));
+
+        //3. 判断是否是闰年
+        function isLeapYear(year) {
+            var flag = false;
+            if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flag = true;
+            }
+            return flag;
+        }
+        var year = parseInt(prompt('请输入年份：'));
+        var judge = isLeapYear(year);
+        if(judge){
+            alert(year + '年是闰年');
+        }else{
+            alert(year + '年不是闰年');
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

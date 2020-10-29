@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            height: 1000px;
+        }
+        i {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: blueviolet;
+        }
+        .small {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform:translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background-color: rgb(161, 31, 31);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <i></i>
+        <div class="small"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字</title>
+    <script>
+        function getRandom(min,max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        var x = getRandom(1,50);
+        // while (1) {
+        //     var xx = prompt('请输入您猜的值(1~50之间的整数):');
+        //     if (xx == x) {
+        //         alert('恭喜你猜对了！数字为' + xx);
+        //         break;
+        //     }else if (xx < x) {
+        //         alert('猜小了！');
+        //     }else if (xx > x) {
+        //         alert('猜大了！');
+        //     }else{
+        //         alert('输入数据没有意义，请重新输入：');
+        //     }
+        // } 
+
+        for (var i = 1; i <= 10; i++) {
+            var xx = prompt('您有10次猜的机会，这是您第' + i + '次猜，请输入您猜的值(1~50之间的整数):');
+            if (xx == x) {
+                alert('恭喜你用' + i + '次猜对了！数字为' + xx);
+                break;
+            }else if (xx < x) {
+                alert('猜小了！');
+            }else if (xx > x) {
+                alert('猜大了！');
+            }else{
+                alert('输入数据没有意义，请重新输入：');
+            }
+            if(i == 10 && xx != x){
+                alert('您用完了猜的次数，猜数失败了！')
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

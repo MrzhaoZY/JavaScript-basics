@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易计算器</title>
+    <script>
+        function inputNum1() {
+            var x = prompt('请输入第一个数:');
+            return parseFloat(x);
+        }
+        function inputNum2() {
+            var y = prompt('请输入第二个数:');
+            return parseFloat(y);
+        }
+        function add(a,b) {
+            return a + b;
+        }
+        function substruct(a,b) {
+            return a - b;
+        }
+        function multiplication(a,b) {
+            return a * b;
+        }
+        function division(a,b) {
+            return a / b;
+        }
+        while (1) {
+            var c = prompt('欢迎使用简易计算器\n1.加法运算：\n2.减法运算\n3.乘法运算\n4.除法运算：\n5.退出：\n请输入您的选项：');
+            var result = 0;
+            if (c == 5) {
+                break;
+            }else if (c == 1) {
+                var a = inputNum1();
+                var b = inputNum2();
+                alert(a + '+' + b +'=' + add(a,b));
+                result = add(a,b);
+            }else if (c == 2) {
+                var a = inputNum1();
+                var b = inputNum2();
+                alert(a + '-' + b +'=' + substruct(a,b));
+                result = add(a,b);
+            }else if (c == 3) {
+                var a = inputNum1();
+                var b = inputNum2();
+                alert(a + '×' + b +'=' + multiplication(a,b));
+                result = add(a,b);
+            }else if (c == 4) {
+                var a = inputNum1();
+                var b = inputNum2();
+                alert(a + '/' + b +'=' + division(a,b));
+                result = add(a,b);
+            }else{
+                console.log('您输入的序号没有意义，请重新输入序号！');
+            }
+            console.log(result);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

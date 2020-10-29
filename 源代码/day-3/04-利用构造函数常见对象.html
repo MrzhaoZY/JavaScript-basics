@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用构造函数创建对象</title>
+    <script>
+        // 之前两种每次只能创建一个对象  里面很多的属性和方法是大量相同的  我们只能复制
+        // 因此我们可以利用函数的方法 重复这些相同的代码 我们就把这个函数称为  构造函数
+        // 因为这个函数不一样 ， 里面封装的不是普通代码， 而是  对象
+        // 构造函数就是把我们对象里面的一些相同代码的属性和方法抽象出来封装到函数里面
+
+
+        // 需求  创建四大天王的对象 相同的属性： 名字 年龄 性别 相同的方法： 唱歌
+        // 构造函数的语法格式
+
+        // function 构造函数名() {
+        //     this.属性 = 值;
+        //     this.方法 = function() {}
+        // }
+        // new 构造函数名();
+
+        function Star(uname, age, sex) {   
+            this.uname = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(music) {
+                console.log(music);
+            }
+        }
+        var ldh =  new Star('刘德华',18,'男'); // 调用函数返回的是一个对象
+        console.log(ldh.uname);
+        ldh.sing('冰雨');
+        // 1.构造函数名  首字母大写
+        // 2.构造函数不需要 return 就可以返回结果
+        // 3.我们调用构造函数 必须使用new
+        // 4.我们只要new Star() 调用函数就创建一个对象 ldh();
+        // 5.我们的属性和方法前面必须添加this.
+        var gfc = new Star('郭富城','12','男');
+        console.log(gfc.uname);
+        console.log(gfc.age);
+        gfc.sing('hello');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

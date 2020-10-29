@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>质数（素数）</title>
+    <script>
+        function isPrimeNumber(x) {
+            var n = 0;
+            for (var i = 1; i <= x; i++) {
+                if (x % i == 0) {
+                    n++;
+                }
+                if (n > 2) {
+                    break;
+                }
+            }
+            return n;
+        }
+        while(1){
+             var n = parseInt(prompt('请输入一个大于1的整数(输入-1退出)：'));
+             if (n == -1){
+                 break;
+             }else if  (n < 2 ) {
+                alert('您输入的没有意义，请重新输入:')
+             }else {
+                 var judge = isPrimeNumber(n);
+                 if( judge == 2 ) {
+                     alert(n + '是素数！');
+                 }else{
+                     alert(n + '不是素数！');
+                 }
+             }
+        }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

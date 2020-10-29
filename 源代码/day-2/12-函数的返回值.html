@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返回值</title>
+    <script>
+        // 1. 求a + b 的和
+        function getSum(a, b){
+            return a + b;
+        }
+        console.log(getSum(1,2));
+
+        // 2. 求两个数的最大值
+        function getMax(a, b) {
+            return a > b ? a : b;
+        }
+        alert(getMax(2,3));
+
+        // 3. 求数组中的最大值
+        function getArrMax(arr) {
+            var max = arr[0];
+            for (var i = 1; i < arr.length; i++){
+                max = max > arr[i] ? max : arr[i];
+            }
+            return max;
+        }
+        var arr = [1,6,4,7,2,4,67,24,534,12,87,24];
+        var m = getArrMax(arr);  // 在实际开发中， 我们经常用一个变量名来接受函数返回的结果
+        alert('该数组中的最大值是：'+m);
+
+        //比如想要输出a与b 的加减乘除结果
+        function getResult(a,b) {
+            return [a + b, a - b, a * b, a / b];
+        }
+        var abResult = getResult(3,2);
+        alert(abResult);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

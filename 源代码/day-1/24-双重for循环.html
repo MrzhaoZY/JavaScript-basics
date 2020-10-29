@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双重for循环</title>
+    <script>
+        var str;
+        for(var i = 0; i < 10; i++){
+            str = '';
+            for(var j = 0; j < 10; j++){
+                str += '★';
+            }
+            console.log(str);
+        }
+        var n = prompt('Please enter n:');
+        var str1;
+        for(var i = 0; i < n; i++){
+            str1 = '';
+            for(var j = 0; j < i; j++){
+                str1 += '★';
+            }
+            console.log(str1);
+        }
+
+        var str2;
+        
+        for(var i = 0; i < n; i++){
+            str2 = '';
+            for(var j = i; j < n; j++){
+                str2 += '★';
+            }
+            console.log(str2);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

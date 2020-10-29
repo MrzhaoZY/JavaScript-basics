@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>格式化日期</title>
+    <script>
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;// 月份记得 +1
+        var day = date.getDate(); 
+        console.log(year);
+        console.log(month);
+        console.log(day);
+        console.log(date.getDay()); // 周一到周六返回 1-6  周日返回0
+        // 我们写一个  2020年 10月 26日 星期一
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        var year1 = date.getFullYear();
+        var month1 = date.getMonth() + 1;// 月份记得 +1
+        var date1 = date.getDate(); 
+        var day1 = date.getDay();
+        
+        console.log('今天是:\t' + year1 + '年\t' + month + '月 ' + date1 + '日\t' + arr[day1]);
+
+        function getTime() {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            h = h < 10 ? '0' + h  : h;
+            m = m < 10 ? '0' + m : m;
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s;
+        }
+        console.log(getTime());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

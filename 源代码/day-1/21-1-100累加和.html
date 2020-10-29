@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-100累加和</title>
+    <script>
+        var num = 0;
+        var numj = 0, n = 0;
+        var num3 = 0, m = 0;
+        for(var i = 1; i <= 100; i++) {
+            num += i;
+        }
+        console.log("num = "+num);
+        console.log("平均数为"+(num / (i - 1)));
+
+        for(var i = 1; i <= 100; i++) {
+            if(i % 2 == 1){
+                numj += i;
+                n++;
+            }
+        }
+        console.log("1-100奇数和为："+numj);
+        console.log("1-100奇数平均数为："+(numj / n));
+
+        for(var i = 1; i <= 100; i++) {
+            if(i % 3 == 0){
+                num3 += i;
+                m++;
+            }
+        }
+        console.log("能被3整除的数有"+m+"个");
+        console.log("能被3整除的数的和为："+ num3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

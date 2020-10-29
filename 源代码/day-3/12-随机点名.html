@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点名</title>
+    <script>
+        function getRandom(min,max){
+            min = Math.floor(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        var max = prompt('请输入班级人数：');
+        while(1) {
+            var x = prompt('您想执行下面哪个操作：\n1.进行随机点名\n2.退出');
+            if(x == 1){
+                var studentId = getRandom(1,max);
+                console.log('尾号为'+studentId+'的同学回答问题！');
+            }else if(x == 2){
+                alert('成功退出！')
+                break;
+            }else{
+                alert('输入序号没有意义，请重新输入！')
+            }
+            
+        }
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

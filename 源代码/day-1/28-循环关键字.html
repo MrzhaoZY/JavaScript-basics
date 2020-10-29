@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关键字</title>
+    <script>
+        // 求1-100之间除了能被7整除的数的和
+        var num = 0;
+        for(var i = 0; i <= 100; i++) {
+            if(i % 7 == 0){
+                continue;
+            }
+            num += i;
+        }
+        console.log(num);
+
+        // 猜数
+        var x = prompt('请输入一个数：');
+        var n = 0;
+        do{
+            n++;
+            var a = prompt('你猜是几：');
+            if (x == a) {
+                alert('恭喜你猜对了！！！你用了'+n+'次猜对的！')
+                console.log('猜对咯，这个数是'+a+'你用了'+n+'次猜对的！');
+                break;
+            }
+        }while(1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

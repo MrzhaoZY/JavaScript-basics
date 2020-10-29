@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遍历对象</title>
+    <script>
+        var obj = {
+            name: 'zs',
+            age : 13,
+            sex : 'm'
+        }
+        var str1 = '', str2 = '';
+        for(var k in obj) {
+            str1 += '\t' + k;
+        }
+        for(var k in obj) {
+            str2 += '\t' + obj[k];
+        }
+        console.log(str1);
+        console.log(str2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

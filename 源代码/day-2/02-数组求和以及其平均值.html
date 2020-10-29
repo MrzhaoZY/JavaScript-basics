@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例</title>
+    <script>
+        var num = 0;
+        var arr = [];
+        var n = parseInt(prompt('请输入班级有多少人：')) ;
+        for(var i = 0; i < n; i++) {
+            arr[i] = prompt('请输入第'+(i+1)+'位学生的成绩！');
+            num += parseFloat(arr[i]);
+        }
+        var max = arr[0];
+        for(var i = 1; i < n; i++) {
+            if(max < arr[i]){
+                max = arr[i];
+            }
+        }
+        alert('该班'+ n + '位同学的成绩总和为：' + num);
+        alert(n + '个同学的平均成绩为：' + (num / n));
+        alert('该班级最高分为：'+ max);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

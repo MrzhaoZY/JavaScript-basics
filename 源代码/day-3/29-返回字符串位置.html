@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返回字符串位置</title>
+    <script>
+        function getTimes(arr,x) {
+            var index = arr.indexOf(x);
+            var n = 0;
+            while (index != -1) {
+                n++;
+                console.log(x + '第' + n + '次出现的位置在索引为' + index + '的位置');
+                index = arr.indexOf(x, index + 1);
+            }
+            return n;
+        }
+        var arr = [2,4,3,6,8,6,5,2,7,8,3,4,6,4,1,7,8,4];
+        var arr1 = getTimes(arr,4);
+        console.log(arr1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

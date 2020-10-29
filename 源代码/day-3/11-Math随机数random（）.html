@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random</title>
+    <script>
+        //0-100随机生成一个数
+        function getRandomInt(min,max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        var x = getRandomInt(0,100);
+        console.log(x);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

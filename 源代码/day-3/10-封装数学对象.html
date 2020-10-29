@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>封装数学对象</title>
+    <script>
+        // 利用对象封装自己的数学对象 里面有 PI 最大值 和 最小值
+        var myMath = {
+            PI : 3.1415926535,
+            max : function () {
+                var max = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            },
+            min : function () {
+                var min = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] > min) {
+                        max = arguments[i];
+                    }
+                }
+                return min;
+            }
+        }
+        console.log(myMath.PI);
+        console.log(myMath.max(1,5,7,8));
+        console.log(myMath.min(1,5,7,8));
+        console.log(Math.floor(1.11));
+        console.log(Math.ceil(1.11));
+        console.log(Math.round(1.49));
+        console.log(Math.round(1.50));
+        console.log(Math.round(-1));
+        console.log(Math.round(-1.5)); // 这个结果是 -1    .5特殊   一般往大了取
+        console.log(Math.round(-1.51)); // 这个结果是 -2
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

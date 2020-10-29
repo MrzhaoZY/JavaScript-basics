@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易ATM</title>
+    <script>
+        var money = 100;
+        while(1){
+            var m = parseFloat(prompt('请输入您的操作：\n1.存钱\n2.取钱\n3.显示余额\n4.退出')) ;
+            if (m == 4){
+                alert('成功退出！');
+                break;
+            }else if(m == 1 || m == 2 || m == 3){
+                switch (m) {
+                    case 1:
+                        var add = parseFloat(prompt('请输入存放的钱：'));
+                        if (add <= 0){
+                            alert('输入错误，请重新输入（输入值应该大于0！！！）');
+                        }else{
+                            oney += add;
+                            alert('您还有'+ money + '元！');
+                        }
+                        m
+                        break;
+
+                    case 2:
+                        var shop =  prompt('您花费了：');
+                        if(shop < 0){
+                            alert('输入错误，请重新输入（输入值应该大于0！！！）');
+                        }else{
+                            if (shop > money) {
+                                alert('余额不足，无法完成扣费！');
+                            }else{
+                                money -= shop;
+                                alert('现在还有'+ money +'元！');
+                            }
+                        }
+                        break;
+
+                    case 3:
+                        alert('您还有'+money+'元！');
+                        break;
+                }
+            }else {
+                alert('输入不合法，请重新输入！（1,2,3,4）');
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
